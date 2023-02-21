@@ -816,7 +816,7 @@ warptraffic(){
         red "设备ID输入格式输入错误，请重新输入！"
         read -rp "请输入您的WARP设备ID (36位字符): " license
     done
-    wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/cfwarp-script/main/files/wp-plus.py
+    wget -N --no-check-certificate https://raw.githubusercontent.com/miyukisakurai/warp/main/files/wp-plus.py
     sed -i "27 s/[(][^)]*[)]//g" wp-plus.py
     sed -i "27 s/input/'$license'/" wp-plus.py
     read -rp "请输入Screen会话名称 (默认为wp-plus): " screenname
